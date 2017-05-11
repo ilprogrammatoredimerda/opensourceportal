@@ -1,0 +1,24 @@
+{
+  "name": "opensourceforum",
+  "version": "1.0.0",
+  "description": "Source code of our forum web app, which is a container for the members of our group to share their projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilprogrammatoredimerda/opensourceforum.git"
+  },
+  "author": "Arcangelo Vicedomini, Matteo Joliveau",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ilprogrammatoredimerda/opensourceforum/issues"
+  },
+  "homepage": "https://github.com/ilprogrammatoredimerda/opensourceforum#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}

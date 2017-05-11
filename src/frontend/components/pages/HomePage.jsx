@@ -9,7 +9,7 @@ export default class HomePage extends React.Component {
     //Placeholder for title banner and navbar
     return (
       <div>
-        <h1>OpenSourceForum</h1>
+        <h1>Open Source Forum</h1>
       </div>
     );
   }

@@ -4,6 +4,7 @@ require('file-loader?name=[name].[ext]!./index.html');
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 /* Custom React Components */
 import HomePage from './components/pages/HomePage.jsx';
@@ -11,13 +12,20 @@ import FormPage from './components/pages/FormPage.jsx';
 import ProjectListPage from './components/pages/ProjectListPage.jsx';
 
 const AppRouter = () => (
+
   <Router>
     <div>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/submit">Submit</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-      </ul>
+    <Navbar>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a href="/">OpenSourceForum</a>
+          </Navbar.Brand>
+        </Navbar.Header>
+        <Nav>
+          <NavItem eventKey={1} href="/submit">Submit</NavItem>
+          <NavItem eventKey={2} href="/projects">Projects</NavItem>
+        </Nav>
+      </Navbar>
 
       <hr/>
 

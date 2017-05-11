@@ -18,7 +18,9 @@
   "homepage": "https://github.com/ilprogrammatoredimerda/opensourceforum#readme",
   "dependencies": {
     "express": "^4.15.2",
+    "nconf": "^0.8.4",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "sequelize": "^3.30.4"
   }
 }

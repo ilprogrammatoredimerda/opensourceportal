@@ -19,11 +19,11 @@
   },
   "homepage": "https://github.com/ilprogrammatoredimerda/opensourceforum#readme",
   "dependencies": {
-
     "express": "^4.15.2",
-    "file-loader": "^0.11.1",
+    "nconf": "^0.8.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "sequelize": "^3.30.4",
     "unirest": "^0.5.1"
   },
   "devDependencies": {
@@ -32,6 +32,7 @@
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "webpack-dev-server": "^2.4.5"
+    "webpack-dev-server": "^2.4.5",
+    "file-loader": "^0.11.1"
   }
 }

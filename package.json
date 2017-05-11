@@ -23,6 +23,8 @@
     "nconf": "^0.8.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
     "sequelize": "^3.30.4",
     "unirest": "^0.5.1"
   },

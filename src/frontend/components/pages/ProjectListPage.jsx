@@ -6,8 +6,9 @@ export default class ProjectsListPage extends React.Component {
 
     //Placeholder for the submit page
     return (
-      <div>
+      <div className="jumbotron">
         <h1>All Projects</h1>
+        <p>In this page users can find all the projects listed</p>
       </div>
     );
   }

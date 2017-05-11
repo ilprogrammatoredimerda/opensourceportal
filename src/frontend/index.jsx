@@ -4,7 +4,7 @@ require('file-loader?name=[name].[ext]!./index.html');
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+//import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 /* Custom React Components */
 import HomePage from './components/pages/HomePage.jsx';
@@ -15,19 +15,18 @@ const AppRouter = () => (
 
   <Router>
     <div>
-    <Navbar>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <a href="/">OpenSourceForum</a>
-          </Navbar.Brand>
-        </Navbar.Header>
-        <Nav>
-          <NavItem eventKey={1} href="/submit">Submit</NavItem>
-          <NavItem eventKey={2} href="/projects">Projects</NavItem>
-        </Nav>
-      </Navbar>
+      <nav className="navbar navbar-default">
+        <div className="container-fluid">
+          <div className="navbar-header">
+            <Link className="navbar-brand" to="/">Open Source Forum</Link>
+          </div>
+          <ul className="nav navbar-nav">
+            <li><Link to="/submit">Submit a Project</Link></li>
+            <li><Link to="/projects">All the Projects</Link></li>
+          </ul>
+          </div>
+      </nav>
 
-      <hr/>
 
       <Route exact path="/" component={HomePage}/>
       <Route path = "/submit" component={FormPage}/>

@@ -1,6 +1,40 @@
 # opensourceforum
 Source code of our forum web app, which is a container for the members of our group to share their projects
 
+## How to use
+### Install
+```shell
+npm install
+npm install --only=dev //to install development dependencies
+```
+
+### Frontend development
+Location: `src/frontend/`   
+Webpack build output: `build/`   
+Frontend is written in ES6 + JSX using [ReactJS](https://facebook.github.io/react).   
+It uses Webpack to manage dependencies and bundling, and it includes `webpack-dev-server` to start
+a lightweight web server to run the frontend.
+
+To start the webserver, run   
+
+```shell
+npm run start:local
+```
+It will be available at http://localhost:8080
+***WARNING You cannot access a URL like `http://localhost:8080/submit` directly when using
+`webpack-dev-server`. Direct URLs only work when running the full application with backend.***
+
+### Backend development
+Location: `src/backend`   
+Backend is written in NodeJS using [ExpressJS](https://expressjs.com).
+
+To start the backend and serve the application, run   
+
+```shell
+npm start
+```
+It will be available at http://localhost:3000
+
 ## Source Tree
 
 ```

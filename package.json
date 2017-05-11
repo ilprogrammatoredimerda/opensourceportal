@@ -2,7 +2,7 @@
   "name": "opensourceforum",
   "version": "1.0.0",
   "description": "Source code of our forum web app, which is a container for the members of our group to share their projects",
-  "main": "index.js",
+  "main": "src/backend/index.js",
   "scripts": {
     "prestart:local": "npm install",
     "start:local": "webpack-dev-server --progress --colors --hot --env=proxy-local",

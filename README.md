@@ -40,6 +40,8 @@ git flow release finish
 npm install
 npm install --only=dev //to install development dependencies if npm install fails to do it
 ```
+To rebuild the frontend using Webpack, run `npm run webpack`. It will create a folder `build/` containing two files,
+`index.html` and `bundle.js`.
 
 ### Frontend development
 Location: `src/frontend/`   

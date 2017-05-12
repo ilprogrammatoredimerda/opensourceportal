@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'FIXED-SYS';
+    src: url('./fixedsys.ttf');
+}
+
+html {
+  font-size: 1.2em;
+  height: 90%;
+  font-family: 'FIXED-SYS', Terminal, monospace;
+}
+
+body {
+  background: #0000aa;
+  color: #b3b3b3;
+  font-family: courier;
+  height: 90%;
+}
+
+h1 {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #b3b3b3;
+  color: #0000aa;
+}
+
+p {
+  margin: 2em 0;
+  text-align: left;
+}
+
+a, a:hover {
+  color: inherit;
+  font: inherit;
+}
+
+blink {
+  color: yellow;
+  -webkit-animation: blink 1s steps(1, end) infinite;
+          animation: blink 1s steps(1, end) infinite;
+}
+
+@-webkit-keyframes blink {
+  80% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  80% {
+    opacity: 0;
+  }
+}
+ul {
+  list-style: none;
+}
+ul li::before {
+  content: '*';
+  position: absolute;
+  left: 1em;
+}
+
+.menu {
+  text-align: center;
+  margin-top: 50px;
+  list-style: none;
+}
+.menu li {
+  display: inline;
+}
+.menu li::before {
+  content: none;
+}

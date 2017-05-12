@@ -1,6 +1,7 @@
 require('file-loader?name=[name].[ext]!./static/index.html');
 require('file-loader?name=[name].[ext]!./static/404.html');
 require('file-loader?name=[name].[ext]!./static/404.css');
+require('file-loader?name=[name].[ext]!./static/fixedsys.ttf');
 
 /* React Framework Components */
 import React from 'react';

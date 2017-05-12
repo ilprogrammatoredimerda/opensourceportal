@@ -7,11 +7,16 @@ export default class FormPage extends React.Component {
 
     //Placeholder for the submit page
     return (
-      <div className="jumbotron">
-        <h1>Project Submit</h1>
-        <p>In this page users can submit new projects</p>
-        <br/>
+      <div>
+      <div className="container">
+        <h1 className="header center">Project Submit</h1>
+        <div className="row center">
+        <p className="header col s12">In this page users can submit new projects</p>
+        </div>
+        </div>
+        <div className="container col s6 offset-s3">
         <ProjectForm />
+        </div>
       </div>
     );
   }

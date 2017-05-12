@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/ilprogrammatoredimerda/opensourceforum#readme",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "nconf": "^0.8.4",
     "react": "^15.5.4",

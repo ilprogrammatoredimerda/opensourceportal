@@ -8,7 +8,7 @@ export default class HomePage extends React.Component {
 
     //Placeholder for title banner and navbar
     return (
-      <div className="jumbotron">
+      <div className="container">
         <h1>Open Source Forum</h1>
         <p>This will be the homepage</p>
       </div>

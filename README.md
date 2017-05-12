@@ -1,4 +1,4 @@
-
+[![Build Status](https://travis-ci.org/ilprogrammatoredimerda/opensourceforum.svg?branch=develop)](https://travis-ci.org/ilprogrammatoredimerda/opensourceforum)    
 # opensourceforum
 Source code of our forum web app, which is a container for the members of our group to share their projects
 

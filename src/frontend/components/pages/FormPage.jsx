@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ProjectForm from '../ProjectForm.jsx'
+
 export default class FormPage extends React.Component {
   render() {
 
@@ -8,6 +10,8 @@ export default class FormPage extends React.Component {
       <div className="jumbotron">
         <h1>Project Submit</h1>
         <p>In this page users can submit new projects</p>
+        <br/>
+        <ProjectForm />
       </div>
     );
   }

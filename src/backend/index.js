@@ -11,7 +11,8 @@ const sendIndexFile = (res) => {
 /* Resolve all static files to this path */
 app.use(express.static(path.resolve(__dirname + "/../../build")));
 
-/* Map all the URI paths to avoid React Router to
+/*
+* Map all the URI paths to avoid React Router to
 * lose the page in case of redirect or manual URL search
 */
 app.get("/", (req, res) => {

@@ -4,7 +4,7 @@
   "description": "Source code of our forum web app, which is a container for the members of our group to share their projects",
   "main": "src/backend/index.js",
   "scripts": {
-    "start": "node ./src/backend/index.js",
+    "start": "start chrome \"http://localhost:3000\" & node ./src/backend/index.js",
     "prestart:local": "npm install",
     "start:local": "webpack-dev-server --progress --colors --hot --env=proxy-local",
     "webpack": "./node_modules/.bin/webpack -d",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/ilprogrammatoredimerda/opensourceforum#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.2",
     "nconf": "^0.8.4",
     "react": "^15.5.4",

@@ -39,29 +39,129 @@ mapping.Project = connection.define('project', {
 		primaryKey: true,
 		autoIncrement: true
 	},
-	codice: {
+	code: {
 		type: Sequelize.STRING,
 		allowNull: false,
 		unique: true
 	},
-	titolo: {
+	title: {
 		type: Sequelize.STRING,
 		allowNull: false
 	},
-	descrizioneBreve: {
+	shortDescription: {
 		type: Sequelize.STRING,
 		allowNull: false,
-		field: "descrizione_breve"
+		field: "shortDescription"
 	},
-	descrizioneCompleta: {
+	fullDescription: {
 		type: Sequelize.TEXT,
 		allowNull: false,
-		field: "descrizione_completa"
+		field: "fullDescription"
 	},
-	immagine: {
+	image: {
 		type: Sequelize.BLOB('long'),
 		allowNull: false
 	}
+});
+
+mapping.Tag = connection.define('tag' {
+	id: {
+		type: Sequelize.INTEGER,
+		primaryKey: true,
+		autoIncrement: true
+	},
+	code: {
+		type: Sequelize.STRING,
+		allowNull: false,
+		unique: true
+	},
+	title: {
+		type: Sequelize.STRING,
+		allowNull: false
+	}
+});
+
+mapping.ProjectTags = connection.define('project_tags' {
+	id: {
+		type: Sequelize.INTEGER,
+		primaryKey: true,
+		autoIncrement: true
+	}
+});
+
+mapping.Project.hasMany(mapping.ProjectTags, {
+	as: 'tags',
+	foreignKey: 'id_project_tag'
+});
+
+mapping.ProjectTags.belongsTo(mapping.Project, {
+	as: 'project',
+	foreignKey: 'id_project'
+});
+
+mapping.Tag.hasMany(mapping.ProjectTags, {
+	as: 'projects',
+	foreignKey: 'id_project_tag'
+});
+
+mapping.ProjectTags.belongsTo(mapping.Tag, {
+	as: 'tag',
+	foreignKey: 'id_tag'
+});
+
+mapping.Technology = connection.define('technology', {
+	id: {
+		type: Sequelize.INTEGER,
+		primaryKey: true,
+		autoIncrement: true
+	},
+	code: {
+		type: Sequelize.STRING,
+		allowNull: false,
+		unique: true
+	},
+	title: {
+		type: Sequelize.STRING,
+		allowNull: false
+	},
+	shortDescription: {
+		type: Sequelize.STRING,
+		allowNull: false,
+		field: "shortDescription"
+	}
+});
+
+mapping.TechnologyUsage = connection.define('technology_usage', {
+	id: {
+		type: Sequelize.INTEGER,
+		primaryKey: true,
+		autoIncrement: true
+	},
+	usageDescription: {
+		type: Sequelize.STRING,
+		allowNull: false,
+		field: "usageDescription"
+	}
+});
+
+mapping.Project.hasMany(mapping.TechnologyUsage, {
+	as: 'technologies',
+	foreignKey: 'id_technology_usage'
+});
+
+mapping.TechnologyUsage.belongsTo(mapping.Project, {
+	as: 'project',
+	foreignKey: 'id_project'
+});
+
+mapping.Technology.hasMany(mapping.TechnologyUsage, {
+	as: 'projects',
+	foreignKey: 'id_technology_usage'
+});
+
+mapping.TechnologyUsage.belongsTo(mapping.Technology, {
+	as: 'technology',
+	foreignKey: 'id_technology'
 });
 
 mapping.ProjectCategory = connection.define('project_category', {
@@ -78,20 +178,20 @@ mapping.Category = connection.define('category', {
 		primaryKey: true,
 		autoIncrement: true
 	},
-	codice: {
+	code: {
 		type: Sequelize.STRING,
 		allowNull: false,
 		unique: true
 	},
-	titolo: {
+	title: {
 		type: Sequelize.STRING,
 		allowNull: false
 	},
-	descrizione: {
+	description: {
 		type: Sequelize.STRING,
 		allowNull: false
 	},
-	immagine: {
+	image: {
 		type: Sequelize.BLOB('long'),
 		allowNull: false
 	}
@@ -123,7 +223,7 @@ mapping.RoleProject = connection.define('role_project', {
 		primaryKey: true,
 		autoIncrement: true
 	},
-	codice: {
+	code: {
 		type: Sequelize.STRING,
 		allowNull: false,
 		unique: true

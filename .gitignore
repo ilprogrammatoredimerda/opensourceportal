@@ -39,3 +39,5 @@ jspm_packages
 # Webpack build folder
 build/*
 build
+.\build
+build/bundle.js

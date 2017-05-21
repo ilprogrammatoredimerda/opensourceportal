@@ -96,7 +96,7 @@ mapping.Project.hasMany(mapping.ProjectTags, {
 
 mapping.ProjectTags.belongsTo(mapping.Project, {
 	as: 'project',
-	foreignKey: 'id_project'
+	foreignKey: 'id'
 });
 
 mapping.Tag.hasMany(mapping.ProjectTags, {
@@ -106,7 +106,7 @@ mapping.Tag.hasMany(mapping.ProjectTags, {
 
 mapping.ProjectTags.belongsTo(mapping.Tag, {
 	as: 'tag',
-	foreignKey: 'id_tag'
+	foreignKey: 'id'
 });
 
 mapping.Technology = connection.define('technology', {
@@ -151,7 +151,7 @@ mapping.Project.hasMany(mapping.TechnologyUsage, {
 
 mapping.TechnologyUsage.belongsTo(mapping.Project, {
 	as: 'project',
-	foreignKey: 'id_project'
+	foreignKey: 'id'
 });
 
 mapping.Technology.hasMany(mapping.TechnologyUsage, {
@@ -161,7 +161,7 @@ mapping.Technology.hasMany(mapping.TechnologyUsage, {
 
 mapping.TechnologyUsage.belongsTo(mapping.Technology, {
 	as: 'technology',
-	foreignKey: 'id_technology'
+	foreignKey: 'id'
 });
 
 mapping.ProjectCategory = connection.define('project_category', {
@@ -199,12 +199,12 @@ mapping.Category = connection.define('category', {
 
 mapping.Project.hasMany(mapping.ProjectCategory, {
 	as: 'categories',
-	foreignKey: 'id_project'
+	foreignKey: 'id_project_category'
 });
 
 mapping.ProjectCategory.belongsTo(mapping.Project, {
 	as: 'project',
-	foreignKey: 'id_project'
+	foreignKey: 'id'
 });
 
 mapping.Category.hasMany(mapping.ProjectCategory, {
@@ -214,7 +214,7 @@ mapping.Category.hasMany(mapping.ProjectCategory, {
 
 mapping.ProjectCategory.belongsTo(mapping.Category, {
 	as: 'category',
-	foreignKey: 'id_category'
+	foreignKey: 'id'
 });
 
 mapping.RoleProject = connection.define('role_project', {
@@ -265,7 +265,7 @@ mapping.Project.hasMany(mapping.RoleProject, {
 
 mapping.RoleProject.belongsTo(mapping.Project, {
 	as: 'project',
-	foreignKey: 'id_project'
+	foreignKey: 'id'
 });
 
 mapping.User.hasMany(mapping.RoleProject, {
@@ -275,7 +275,7 @@ mapping.User.hasMany(mapping.RoleProject, {
 
 mapping.RoleProject.belongsTo(mapping.User, {
 	as: 'user',
-	foreignKey: 'id_user'
+	foreignKey: 'id'
 });
 
 connection.sync();

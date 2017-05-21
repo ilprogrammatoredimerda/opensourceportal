@@ -124,10 +124,14 @@ mapping.Technology = connection.define('technology', {
 		type: Sequelize.STRING,
 		allowNull: false
 	},
+	type: {
+		type: Sequelize.STRING,
+		allowNull: false
+	},
 	shortDescription: {
 		type: Sequelize.STRING,
 		allowNull: false,
-		field: "shortDescription"
+		field: "short_description"
 	}
 });
 
@@ -245,6 +249,11 @@ mapping.User = connection.define('user', {
 		type: Sequelize.STRING,
 		unique: true,
 		allowNull: false
+	},
+	applicationRole: {
+		type: Sequelize.STRING,
+		allowNull: false,
+		field: "application_role"
 	},
 	password: {
 		type: Sequelize.STRING,

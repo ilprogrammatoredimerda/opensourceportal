@@ -4,7 +4,7 @@
   "description": "Source code of our forum web app, which is a container for the members of our group to share their projects",
   "main": "src/backend/index.js",
   "scripts": {
-    "start": "start chrome \"http://localhost:3000\" & node ./src/backend/index.js",
+    "start": "npm run webpack & start chrome \"http://localhost:3000\" & node ./src/backend/index.js",
     "prestart:local": "npm install",
     "start:local": "webpack-dev-server --progress --colors --hot --env=proxy-local",
     "webpack": "./node_modules/.bin/webpack -d",
